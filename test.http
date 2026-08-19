@@ -1,0 +1,24 @@
+### 1. File-based skill (widget-catalog) - must trigger load_skill then read_skill_resource,
+### and the answer must contain the invented SKU / compatibility facts.
+POST http://localhost:5060/run
+Content-Type: application/json
+
+{
+    "prompt": "What is the SKU for the Aurora-9 Connector, and what is it compatible with per the compatibility notes?"
+}
+
+### 2. Inline skill (joke-teller)
+POST http://localhost:5060/run
+Content-Type: application/json
+
+{
+    "prompt": "Tell me a joke."
+}
+
+### 3. Class-based skill + script + approval gate (greeting-formalizer)
+POST http://localhost:5060/run
+Content-Type: application/json
+
+{
+    "prompt": "Formalize this greeting: hey there!!"
+}

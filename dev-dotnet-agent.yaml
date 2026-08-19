@@ -1,0 +1,8 @@
+version: 1
+common:
+  appLogDestination: console
+apps:
+  - appID: skills-assistant
+    appDirPath: ./
+    appPort: 5060
+    command: ["dotnet", "run", "--urls", "http://localhost:5060"]

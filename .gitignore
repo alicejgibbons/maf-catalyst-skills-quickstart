@@ -1,0 +1,10 @@
+## .NET
+bin/
+obj/
+
+## Runtime/dev-session artifacts from `diagrid dev run`
+dev-run.log
+
+## Environment / secrets - never commit an OPENAI_API_KEY or similar
+.env
+*.env
