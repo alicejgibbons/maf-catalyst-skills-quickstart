@@ -16,9 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- Deliberately a ProjectReference to the CLONED PR #63 branch source, not the released
-         Diagrid.AI.Microsoft.AgentFramework NuGet package (1.0.10, which predates Skills support).
-         This is the whole point of this sample: prove the PR's code, not the shipped package. -->
+    <!-- Deliberately a ProjectReference to the CLONED PR #67 branch source (invokerdrop-1, based on
+         master with PR #63's skills support already merged), not the released
+         Diagrid.AI.Microsoft.AgentFramework NuGet package (1.0.10, which predates both). This is the
+         whole point of this sample: prove the PRs' code, not the shipped package. -->
     <ProjectReference Include="../dotnet-ai/src/Diagrid.AI.Microsoft.AgentFramework/Diagrid.AI.Microsoft.AgentFramework.csproj" />
   </ItemGroup>
 

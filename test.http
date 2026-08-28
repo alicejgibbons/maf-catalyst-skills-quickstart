@@ -22,3 +22,23 @@ Content-Type: application/json
 {
     "prompt": "Formalize this greeting: hey there!!"
 }
+
+### 4. PR #67 (issue #66) proof: AgentRunOptions.AdditionalProperties["sessionId"] must reach the
+### context-provider pipeline. Check the response's "sessionMemoryProof" object - all three fields
+### must equal "demo-session-1". Before the fix, all three would be null.
+POST http://localhost:5060/run
+Content-Type: application/json
+
+{
+    "prompt": "Tell me a joke.",
+    "sessionId": "demo-session-1"
+}
+
+### 5. Same as #4 but with no sessionId supplied - "sessionMemoryProof" should show all three fields
+### as null, confirming the endpoint only sets AgentRunOptions when a session id is actually given.
+POST http://localhost:5060/run
+Content-Type: application/json
+
+{
+    "prompt": "Tell me a joke."
+}
